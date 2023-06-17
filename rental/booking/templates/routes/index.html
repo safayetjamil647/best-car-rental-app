@@ -1,0 +1,17 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %}{{ current_year }} Routes{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+      
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Routes" icon="date" %}
+
+    <div class="nice-padding">
+        <p>routes</p>
+    </div>
+{% endblock %}
