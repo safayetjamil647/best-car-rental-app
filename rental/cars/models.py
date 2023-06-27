@@ -22,8 +22,9 @@ class Car(models.Model):
         ("4", "4 Bags"),
     ]
 
-    car_id = models.SmallAutoField(primary_key=True)
+
     car_name = models.CharField(max_length=50)
+    # car_registration = models.TextField(max_length=20) implement later
     car_description = models.TextField(max_length=250)
     car_mileage  = models.CharField(max_length=8)
     car_transmission  = models.CharField(max_length=8,choices=TRANSMISSION)
@@ -31,4 +32,6 @@ class Car(models.Model):
     car_luggage = models.CharField(max_length=10,choices=Luggage)
     car_fuel = models.CharField(max_length=10,choices=FUEL)
     car_images = models.ImageField(upload_to="cars_image")
+    available_now = models.BooleanField(default=True)
     created_at = models.DateField(auto_now=True, )
+    updated_at = models.DateField(auto_now=True, )

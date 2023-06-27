@@ -1,0 +1,17 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %} Remove Car{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+     
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
+
+    <div class="nice-padding">
+       <p>Add Cars</p>
+    </div>
+{% endblock %}

@@ -1,0 +1,155 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %} All Cars{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+     table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    border: 0;
+  }
+
+  table caption {
+    font-size: 1.3em;
+  }
+  
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  
+  table tr {
+    border-bottom: 3px solid #ddd;
+    display: block;
+    margin-bottom: .625em;
+  }
+  
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: .8em;
+    text-align: right;
+  }
+  
+  table td::before {
+    /*
+    * aria-label has no advantage, it won't be read inside a table
+    content: attr(aria-label);
+    */
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  table td:last-child {
+    border-bottom: 0;
+  }
+}
+
+
+.button2 {
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
+
+    <div class="nice-padding">
+       <p>All Cars</p>
+
+       <table>
+        <caption>Statement Summary</caption>
+        <thead>
+          <tr>
+            <th scope="col">Car Name</th>
+            <th scope="col">Registration</th>
+            <th scope="col">Transmission</th>
+            <th scope="col">Seats</th>
+            <th scope="col">Luggage</th>
+            <th scope="col">Fuel</th>
+            <th scope="col">Available</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Car Name">Visa - 3412</td>
+            <td data-label="Registration">10000</td>
+            <td data-label="Transmission">Manual</td>
+            <td data-label="Seats">5 Seats</td>
+            <td data-label="Luggage">5Bags</td>
+            <td data-label="Fuel">Petrol</td>
+            <td data-label="Available">Yes/No</td>
+            <td data-label="Action"><button class="button button2">Details</button></td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Car Name">Visa - 6076</td>
+            <td data-label="Registration">10000</td>
+            <td data-label="Transmission">Manual</td>
+            <td data-label="Seats">5 Seats</td>
+            <td data-label="Luggage">5Bags</td>
+            <td data-label="Fuel">Petrol</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Car Name">Corporate AMEX</td>
+            <td data-label="Registration">10000</td>
+            <td data-label="Transmission">Manual</td>
+            <td data-label="Seats">5 Seats</td>
+            <td data-label="Luggage">5Bags</td>
+            <td data-label="Fuel">Petrol</td>
+          </tr>
+          <tr>
+            <td scope="row" data-label="Car Name">Visa - 3412</td>
+            <td data-label="Registration">10000</td>
+            <td data-label="Transmission">Manual</td>
+            <td data-label="Seats">5 Seats</td>
+            <td data-label="Luggage">5Bags</td>
+            <td data-label="Fuel">Petrol</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+{% endblock %}
