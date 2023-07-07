@@ -18,7 +18,7 @@ class Car(models.Model):
     ]
     Luggage = [
         ("2", "2 Bags"),
-        ("3", "4 Bags"),
+        ("3", "3 Bags"),
         ("4", "4 Bags"),
     ]
 

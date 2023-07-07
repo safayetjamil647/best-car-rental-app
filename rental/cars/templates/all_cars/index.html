@@ -86,7 +86,7 @@ table th {
 }
 
 
-.button2 {
+.button-update {
   background-color: white; 
   color: black; 
   border: 2px solid #008CBA;
@@ -98,10 +98,12 @@ table th {
     {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
 
     <div class="nice-padding">
-       <p>All Cars</p>
+      <a class="button button-update" href={% url 'cars:add_cars' %}>Add Car</a>
 
+       
+      
        <table>
-        <caption>Statement Summary</caption>
+        <caption>All Car List</caption>
         <thead>
           <tr>
             <th scope="col">Car Name</th>
@@ -115,40 +117,22 @@ table th {
           </tr>
         </thead>
         <tbody>
+            {% for car in cars %}
           <tr>
-            <td data-label="Car Name">Visa - 3412</td>
-            <td data-label="Registration">10000</td>
-            <td data-label="Transmission">Manual</td>
-            <td data-label="Seats">5 Seats</td>
-            <td data-label="Luggage">5Bags</td>
-            <td data-label="Fuel">Petrol</td>
-            <td data-label="Available">Yes/No</td>
-            <td data-label="Action"><button class="button button2">Details</button></td>
+            <td data-label="Car Name">{{ car.car_name }}</td>
+            <td data-label="Mileage">{{ car.car_mileage }}</td>
+            <td data-label="Transmission">{{ car.car_transmission }}</td>
+            <td data-label="Seats">{{ car.car_seats }}</td>
+            <td data-label="Luggage">{{ car.car_luggage }}</td>
+            <td data-label="Fuel">{{ car.car_fuel }}</td>
+            <td data-label="Available">{{ car.available_now }}</td>
+            <td data-label="Action"><a class="button button-update" href="{% url 'cars:details_car' car.id %}">Details</a></td>
+            
+           
           </tr>
-          <tr>
-            <td scope="row" data-label="Car Name">Visa - 6076</td>
-            <td data-label="Registration">10000</td>
-            <td data-label="Transmission">Manual</td>
-            <td data-label="Seats">5 Seats</td>
-            <td data-label="Luggage">5Bags</td>
-            <td data-label="Fuel">Petrol</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Car Name">Corporate AMEX</td>
-            <td data-label="Registration">10000</td>
-            <td data-label="Transmission">Manual</td>
-            <td data-label="Seats">5 Seats</td>
-            <td data-label="Luggage">5Bags</td>
-            <td data-label="Fuel">Petrol</td>
-          </tr>
-          <tr>
-            <td scope="row" data-label="Car Name">Visa - 3412</td>
-            <td data-label="Registration">10000</td>
-            <td data-label="Transmission">Manual</td>
-            <td data-label="Seats">5 Seats</td>
-            <td data-label="Luggage">5Bags</td>
-            <td data-label="Fuel">Petrol</td>
-          </tr>
+        
+          {% endfor %}
+         
         </tbody>
       </table>
     </div>

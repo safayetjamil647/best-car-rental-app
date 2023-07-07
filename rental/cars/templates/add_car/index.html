@@ -10,8 +10,18 @@
 
 {% block content %}
     {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
-
     <div class="nice-padding">
+        <p>Add Cars</p>
+    <div class="container">
+        <h2>Add Car</h2>
+        <form method="post" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form.as_ul }}
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <!-- <div class="nice-padding">
        <p>Add Cars</p>
        <div class="container">
         <form method="post" enctype="multipart/form-data">
@@ -67,5 +77,5 @@
         </form>
       </div>
       
-    </div>
+    </div> -->
 {% endblock %}

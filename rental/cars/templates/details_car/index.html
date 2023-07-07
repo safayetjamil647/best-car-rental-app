@@ -4,7 +4,16 @@
 {% block extra_css %}
     {{ block.super }}
     <style>
-     
+.button-delete {
+  background-color: #f44336; 
+  color: black; 
+  border: 2px solid #f44336;
+}
+.button-update {
+  background-color: #e7e7e7; 
+  color: black; 
+  border: 2px solid #e7e7e7;
+}
     </style>
 {% endblock %}
 
@@ -24,14 +33,17 @@
               <p>{{ car.car_description }}</p>
               <ul>
                 <li><strong>Mileage:</strong> {{ car.car_mileage }}</li>
-                <li><strong>Transmission:</strong> {{ car.get_car_transmission_display }}</li>
-                <li><strong>Seats:</strong> {{ car.get_car_seats_display }}</li>
-                <li><strong>Luggage:</strong> {{ car.get_car_luggage_display }}</li>
-                <li><strong>Fuel:</strong> {{ car.get_car_fuel_display }}</li>
+                <li><strong>Transmission:</strong> {{ car.car_transmission }}</li>
+                <li><strong>Seats:</strong> {{ car.car_seats }}</li>
+                <li><strong>Luggage:</strong> {{ car.car_luggage }}</li>
+                <li><strong>Fuel:</strong> {{ car.car_fuel}}</li>
               </ul>
             </div>
           </div>
+          <a class="button button-update" href="{% url 'cars:update_car' car.id %}">Update</a> 
+          <a class="button button-delete" href="{% url 'cars:remove_car' car.id %}">Delete</a> 
         </div>
       </div>
     </div>
+    
 {% endblock %}
