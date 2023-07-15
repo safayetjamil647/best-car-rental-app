@@ -24,7 +24,7 @@ class Car(models.Model):
 
 
     car_name = models.CharField(max_length=50)
-    # car_registration = models.TextField(max_length=20) implement later
+    car_registration = models.TextField(max_length=20) 
     car_description = models.TextField(max_length=250)
     car_mileage  = models.CharField(max_length=8)
     car_transmission  = models.CharField(max_length=8,choices=TRANSMISSION)

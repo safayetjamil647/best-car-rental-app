@@ -1,0 +1,60 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %}Add Bookings{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+     
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
+
+    <div class="nice-padding">
+       <p>Add Bookings</p>
+       <div class="container">
+        <h2>Add Booking</h2>
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="car">Car:</label>
+            <input type="text" class="form-control" id="car" name="car" required>
+          </div>
+          <div class="form-group">
+            <label for="from_destination">From Destination:</label>
+            <input type="text" class="form-control" id="from_destination" name="from_destination" required>
+          </div>
+          <div class="form-group">
+            <label for="to_destination">To Destination:</label>
+            <input type="text" class="form-control" id="to_destination" name="to_destination" required>
+          </div>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="text" class="form-control" id="price" name="price" required>
+          </div>
+          <div class="form-group">
+            <label for="price_type">Price Type:</label>
+            <select class="form-control" id="price_type" name="price_type" required>
+              <option value="Leasing">Leasing</option>
+              <option value="Hourly">Hourly</option>
+              <option value="Daily">Daily</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="pick_up_date">Pick-up Date:</label>
+            <input type="date" class="form-control" id="pick_up_date" name="pick_up_date" required>
+          </div>
+          <div class="form-group">
+            <label for="pick_up_time">Pick-up Time:</label>
+            <input type="time" class="form-control" id="pick_up_time" name="pick_up_time" required>
+          </div>
+          <div class="form-group">
+            <label for="end_time">End Time:</label>
+            <input type="time" class="form-control" id="end_time" name="end_time" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Booking</button>
+        </form>
+      </div>
+    </div>
+{% endblock %}

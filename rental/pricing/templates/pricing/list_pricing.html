@@ -1,0 +1,36 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %} Add Price{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+     
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
+
+    <div class="nice-padding">
+        <div class="container">
+            <a class="button button-update" href="{% url 'pricing:add_pricing' %}">Add Price</a>
+            <h2>List of Pricing Information</h2>
+            <ul>
+                {% for pricing in pricings %}
+                  <li>
+                    <strong>Car Name:</strong> {{ pricing.car_name }}
+                    <br>
+                    <strong>Hourly Price:</strong> {{ pricing.price_hourly }}
+                    <br>
+                    <strong>Daily Price:</strong> {{ pricing.price_daily }}
+                    <br>
+                    <strong>Leasing Price:</strong> {{ pricing.price_leasing }}
+                  </li>
+                  <hr>
+                {% empty %}
+                  <li>No pricing information available.</li>
+                {% endfor %}
+              </ul>
+          </div>
+    </div>
+{% endblock %}

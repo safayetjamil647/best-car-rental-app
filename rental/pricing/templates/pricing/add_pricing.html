@@ -1,0 +1,25 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %} Add Price{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+     
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
+
+    <div class="nice-padding">
+        <div class="container">
+            
+            <h2>Add Pricing</h2>
+            <form method="post">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="btn btn-primary">Add Pricing</button>
+            </form>
+          </div>
+    </div>
+{% endblock %}

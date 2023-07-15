@@ -1,0 +1,45 @@
+{% extends "wagtailadmin/base.html" %}
+{% block titletag %}Add Bookings{% endblock %}
+
+{% block extra_css %}
+    {{ block.super }}
+    <style>
+     
+    </style>
+{% endblock %}
+
+{% block content %}
+    {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
+
+    <div class="nice-padding">
+        <a class="button button-update" href={% url 'bookings:add_booking' %}>Add Booking</a>
+       <div class="container">
+        <h2>List of Bookings</h2>
+        <ul>
+          {% for booking in bookings %}
+            <li>
+              <strong>Car:</strong> {{ booking.car }}
+              <br>
+              <strong>From Destination:</strong> {{ booking.from_destination }}
+              <br>
+              <strong>To Destination:</strong> {{ booking.to_destination }}
+              <br>
+              <strong>Price:</strong> {{ booking.price }}
+              <br>
+              <strong>Price Type:</strong> {{ booking.get_price_type_display }}
+              <br>
+              <strong>Pick-up Date:</strong> {{ booking.pick_up_date }}
+              <br>
+              <strong>Pick-up Time:</strong> {{ booking.pick_up_time }}
+              <br>
+              <strong>End Time:</strong> {{ booking.end_time }}
+            </li>
+            <hr>
+          {% empty %}
+            <li>No bookings available.</li>
+          {% endfor %}
+        </ul>
+      </div>
+      
+    </div>
+{% endblock %}

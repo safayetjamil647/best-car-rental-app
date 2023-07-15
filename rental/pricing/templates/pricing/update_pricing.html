@@ -1,5 +1,5 @@
 {% extends "wagtailadmin/base.html" %}
-{% block titletag %}{{ current_year }} Bookinglendar{% endblock %}
+{% block titletag %} Add Price{% endblock %}
 
 {% block extra_css %}
     {{ block.super }}
@@ -12,6 +12,11 @@
     {% include "wagtailadmin/shared/header.html" with title="Rides" icon="date" %}
 
     <div class="nice-padding">
-       <p>Rides</p>
+        <h2>Update Pricing</h2>
+        <form method="post">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <button type="submit" class="btn btn-primary">Update Pricing</button>
+        </form>
     </div>
 {% endblock %}
