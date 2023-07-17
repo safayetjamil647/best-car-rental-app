@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 
-<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('images/bg_3.jpg');" data-stellar-background-ratio="0.5">
+<section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('{% static 'media/bg_3.jpg' %}');" data-stellar-background-ratio="0.5">
   <div class="overlay"></div>
   <div class="container">
     <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-start">
@@ -22,10 +22,9 @@
                 <div class="col-md-6 wrap-about ftco-animate">
           <div class="heading-section heading-section-white pl-md-5">
               <span class="subheading">About us</span>
-            <h2 class="mb-4">Welcome to Carbook</h2>
+            <h2 class="mb-4">Welcome to Best Cars</h2>
 
-            <p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
-            <p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>
+            <p>Welcome to our car rental business, where convenience meets adventure! Discover a fleet of well-maintained, top-notch vehicles to suit every journey and budget. Whether you're exploring the city or embarking on an epic road trip, we've got you covered. Our seamless online booking process ensures hassle-free reservations. With flexible rental options and stellar customer service, your satisfaction is our priority. Experience a smooth ride and unforgettable memories with our reliable car rental services. Get ready to hit the road and embrace the freedom of travel. Start your adventure today with us!</p>
             <p><a href="#" class="btn btn-primary py-3 px-4">Search Vehicle</a></p>
           </div>
                 </div>
@@ -46,77 +45,77 @@
     </section>
 
 
-<section class="ftco-section testimony-section bg-light">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-md-7 text-center heading-section ftco-animate">
-          <span class="subheading">Testimonial</span>
-        <h2 class="mb-3">Happy Clients</h2>
-      </div>
-    </div>
-    <div class="row ftco-animate">
-      <div class="col-md-12">
-        <div class="carousel-testimony owl-carousel ftco-owl">
-          <div class="item">
-            <div class="testimony-wrap rounded text-center py-4 pb-5">
-              <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
-              </div>
-              <div class="text pt-4">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <p class="name">Roger Scott</p>
-                <span class="position">Marketing Manager</span>
-              </div>
-            </div>
+    <section class="ftco-section testimony-section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+              <span class="subheading">Testimonial</span>
+            <h2 class="mb-3">Happy Clients</h2>
           </div>
-          <div class="item">
-            <div class="testimony-wrap rounded text-center py-4 pb-5">
-              <div class="user-img mb-2" style="background-image: url(images/person_2.jpg)">
+        </div>
+        <div class="row ftco-animate">
+          <div class="col-md-12">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('{% static 'media/person_1.jpg' %}');">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4">Fantastic car rental experience! Quick booking process, excellent vehicle selection, and friendly staff. Smooth pickup and drop-off. Will definitely rent from them again!</p>
+                    <p class="name">Nicolas Billing</p>
+                    <span class="position">Devops Engineer</span>
+                  </div>
+                </div>
               </div>
-              <div class="text pt-4">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <p class="name">Roger Scott</p>
-                <span class="position">Interface Designer</span>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('{% static 'media/person_2.jpg' %}');">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4">Absolutely delighted with my car rental experience! The website was easy to use, and the car was clean and in great condition.Highly recommended for your next trip </p>
+                    <p class="name">Roger Scott</p>
+                    <span class="position">Interface Designer</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap rounded text-center py-4 pb-5">
-              <div class="user-img mb-2" style="background-image: url(images/person_3.jpg)">
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('{% static 'media/person_3.jpg' %}');">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4">What a fantastic car rental service! The website was intuitive, and the vehicle was pristine. The staff was friendly and efficient, making my trip a pleasure. Will definitely be back!</p>
+                    <p class="name">Brian Lara</p>
+                    <span class="position">UI Designer</span>
+                  </div>
+                </div>
               </div>
-              <div class="text pt-4">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <p class="name">Roger Scott</p>
-                <span class="position">UI Designer</span>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('{% static 'media/person_4.jpg' %}');">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4">I had an amazing car rental experience! The website was user-friendly, and the car was perfect for my trip. The staff was helpful and professional. Highly recommended!</p>
+                    <p class="name">Benjamin Box</p>
+                    <span class="position">Web Developer</span>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap rounded text-center py-4 pb-5">
-              <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
-              </div>
-              <div class="text pt-4">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <p class="name">Roger Scott</p>
-                <span class="position">Web Developer</span>
-              </div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="testimony-wrap rounded text-center py-4 pb-5">
-              <div class="user-img mb-2" style="background-image: url(images/person_1.jpg)">
-              </div>
-              <div class="text pt-4">
-                <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                <p class="name">Roger Scott</p>
-                <span class="position">System Analyst</span>
+              <div class="item">
+                <div class="testimony-wrap rounded text-center py-4 pb-5">
+                  <div class="user-img mb-2" style="background-image: url('{% static 'media/person_2.jpg' %}');">
+                  </div>
+                  <div class="text pt-4">
+                    <p class="mb-4">I can't say enough good things about this car rental service! The website was a breeze to use, the car was spotless, and the customer service was outstanding.</p>
+                    <p class="name">Pinaki Vatt</p>
+                    <span class="position">System Analyst</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
 <section class="ftco-counter ftco-section img" id="section-counter">
         <div class="overlay"></div>
@@ -125,7 +124,7 @@
       <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
         <div class="block-18">
           <div class="text text-border d-flex align-items-center">
-            <strong class="number" data-number="60">0</strong>
+            <strong class="number" data-number="10">0</strong>
             <span>Year <br>Experienced</span>
           </div>
         </div>
@@ -133,7 +132,7 @@
       <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
         <div class="block-18">
           <div class="text text-border d-flex align-items-center">
-            <strong class="number" data-number="1090">0</strong>
+            <strong class="number" data-number="7090">0</strong>
             <span>Total <br>Cars</span>
           </div>
         </div>
@@ -149,7 +148,7 @@
       <div class="col-md-6 col-lg-3 justify-content-center counter-wrap ftco-animate">
         <div class="block-18">
           <div class="text d-flex align-items-center">
-            <strong class="number" data-number="67">0</strong>
+            <strong class="number" data-number="5">0</strong>
             <span>Total <br>Branches</span>
           </div>
         </div>
